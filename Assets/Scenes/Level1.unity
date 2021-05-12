@@ -1202,7 +1202,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1780267841466034778, guid: 3cecde7789bb8f04fb878437df3fea2f, type: 3}
       propertyPath: m_Mass
-      value: 0.1
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 1780267841466034778, guid: 3cecde7789bb8f04fb878437df3fea2f, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1780267841466034778, guid: 3cecde7789bb8f04fb878437df3fea2f, type: 3}
+      propertyPath: m_Constraints
+      value: 56
       objectReference: {fileID: 0}
     - target: {fileID: 1800107282443427874, guid: 3cecde7789bb8f04fb878437df3fea2f, type: 3}
       propertyPath: m_Mesh
