@@ -1,5 +1,5 @@
 {
-    "name": "DefaultActions",
+    "name": "DefaultAction",
     "maps": [
         {
             "name": "Rocket",
@@ -12,6 +12,14 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "LeftRight",
+                    "type": "PassThrough",
+                    "id": "03d2d950-2cc0-481f-8fb9-f885c4abe399",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press(behavior=2)"
                 }
             ],
             "bindings": [
@@ -25,6 +33,39 @@
                     "action": "ForceUp",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "1D Axis",
+                    "id": "45685553-b94a-48f9-b566-c2983256f8ad",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "LeftRight",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "d849f10c-e21d-46fc-a093-f192b332bbfa",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "LeftRight",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "70c8b858-b0dc-4e4d-ac0c-3e29509ebd5f",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "LeftRight",
+                    "isComposite": false,
+                    "isPartOfComposite": true
                 }
             ]
         }

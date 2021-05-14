@@ -8,17 +8,23 @@ namespace SampleProject3D.Controller {
     
     public class PlayerController : MonoBehaviour
     {
-        [SerializeField] float force;
+        [SerializeField] float turnSpeed = 10f;
+        [SerializeField] float force=55f;
         
         DefaultInput _Input;
         Mover _Mover;
+        Rotator _Rotator;
 
         bool isForceUp;
-        
+        float LeftRight;
+
+        public float TurnSpeed => turnSpeed;
+        public float Force => force;
         private void Awake()
         {
             _Input = new DefaultInput();
-            _Mover = new Mover(GetComponent<Rigidbody>());
+            _Mover = new Mover(this);
+            _Rotator = new Rotator(this);
         }
         private void Update()
         {
@@ -30,6 +36,7 @@ namespace SampleProject3D.Controller {
             {
                 isForceUp = false; 
             }
+            LeftRight = _Input.LeftRight;
         }
         private void FixedUpdate()
         {
@@ -37,6 +44,8 @@ namespace SampleProject3D.Controller {
             {
                 _Mover.FixedTick();
             }
+            _Rotator.FixedTick(LeftRight);
+       
         }
 
     }

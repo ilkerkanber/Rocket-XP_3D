@@ -486,7 +486,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-1278
+  m_Name: pb_Mesh-1282
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1155,6 +1155,10 @@ PrefabInstance:
     - target: {fileID: 383569906302367392, guid: 3cecde7789bb8f04fb878437df3fea2f, type: 3}
       propertyPath: force
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 383569906302367392, guid: 3cecde7789bb8f04fb878437df3fea2f, type: 3}
+      propertyPath: turnSpeed
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 1602590242758493817, guid: 3cecde7789bb8f04fb878437df3fea2f, type: 3}
       propertyPath: m_LocalPosition.x
