@@ -14,8 +14,9 @@ namespace SampleProject3D.Controller {
         DefaultInput _Input;
         Mover _Mover;
         Rotator _Rotator;
+        Fuel _Fuel;
 
-        bool isForceUp;
+        bool canForceUp;
         float LeftRight;
 
         public float TurnSpeed => turnSpeed;
@@ -25,24 +26,28 @@ namespace SampleProject3D.Controller {
             _Input = new DefaultInput();
             _Mover = new Mover(this);
             _Rotator = new Rotator(this);
+            _Fuel = GetComponent<Fuel>();
+            
         }
         private void Update()
         {
-            if (_Input.IsForceUp) 
+            if (_Input.IsForceUp && !_Fuel.isEmpty ) 
             {
-                isForceUp = true; 
+                canForceUp = true; 
             }
             else 
             {
-                isForceUp = false; 
+                canForceUp = false;
+                _Fuel.FuelIncrease(0.1f);
             }
             LeftRight = _Input.LeftRight;
         }
         private void FixedUpdate()
         {
-            if (isForceUp)
+            if (canForceUp)
             {
                 _Mover.FixedTick();
+                _Fuel.FuelDecrease(0.2f);
             }
             _Rotator.FixedTick(LeftRight);
        
