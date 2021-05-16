@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 namespace SampleProject3D.Controller {
 
@@ -9,7 +8,7 @@ namespace SampleProject3D.Controller {
     {
         private void OnCollisionEnter(Collision collision)
         {
-            PlayerController pController = collision.collider.GetComponent<PlayerController>();
+            PlayerController pController = GetComponent<PlayerController>();
             if (pController != null)
             {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
@@ -18,4 +17,3 @@ namespace SampleProject3D.Controller {
     
     }
 }
-
