@@ -267,6 +267,7 @@ GameObject:
   - component: {fileID: 197139564}
   - component: {fileID: 197139563}
   - component: {fileID: 197139562}
+  - component: {fileID: 197139566}
   m_Layer: 0
   m_Name: StartFloor
   m_TagString: Untagged
@@ -351,6 +352,18 @@ Transform:
   m_Father: {fileID: 1032755311}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &197139566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 197139561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39eb2a52a806ae748ac06575dc3dcea5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!108 &705507994 stripped
 Light:
   m_CorrespondingSourceObject: {fileID: 899007049352923568, guid: eca5d00799b47f24085b0df820d91d44, type: 3}
