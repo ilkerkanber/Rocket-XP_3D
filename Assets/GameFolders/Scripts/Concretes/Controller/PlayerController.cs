@@ -35,14 +35,20 @@ namespace SampleProject3D.Controller {
         private void Start()
         {
             canMove = true;
-            GameManager.Instance.OnGameOver += GameOverEvent;
+            GameManager.Instance.OnGameOver += FreezePlayerEvent;
+            GameManager.Instance.OnMissionSucced += FreezePlayerEvent;
+
+
         }
+
 
         private void OnDisable()
         {
-            GameManager.Instance.OnGameOver -= GameOverEvent;
+            GameManager.Instance.OnGameOver -= FreezePlayerEvent;
+            GameManager.Instance.OnMissionSucced -= FreezePlayerEvent;
+
         }
-      
+
         private void Update()
         {
             if (!canMove)
@@ -70,7 +76,7 @@ namespace SampleProject3D.Controller {
             _Rotator.FixedTick(LeftRight);
         }
 
-        private void GameOverEvent()
+        private void FreezePlayerEvent()
         {
             canMove = false;
             canForceUp = false;

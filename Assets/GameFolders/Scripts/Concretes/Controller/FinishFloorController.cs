@@ -20,6 +20,7 @@ namespace SampleProject3D.Controller {
                 {
                     finishFireWork.SetActive(true);
                     finishLight.SetActive(true);
+                    GameManager.Instance.MissionSucced();
                 }
                 else
                 {
