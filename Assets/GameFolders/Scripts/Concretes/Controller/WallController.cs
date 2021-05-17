@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using SampleProject3D.Managers;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -12,7 +13,7 @@ namespace SampleProject3D.Controller {
             PlayerController pController = collision.collider.GetComponent<PlayerController>();
             if (pController != null)
             {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+                GameManager.Instance.GameOver();
             }
         }
     
