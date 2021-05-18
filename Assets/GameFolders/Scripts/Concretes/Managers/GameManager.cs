@@ -16,7 +16,6 @@ namespace SampleProject3D.Managers {
         {
             SingletonPattern();
         }
-
         void SingletonPattern()
         {
             if (Instance == null)

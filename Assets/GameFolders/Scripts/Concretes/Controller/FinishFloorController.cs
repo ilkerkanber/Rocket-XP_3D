@@ -13,9 +13,11 @@ namespace SampleProject3D.Controller {
         private void OnCollisionEnter(Collision obj)
         {
             PlayerController player = obj.collider.GetComponent<PlayerController>();
-            if (player == null) { 
-                return;
-            }
+
+                if (player == null || !player.CanMove )
+                { 
+                    return;
+                }
                 if (obj.GetContact(0).normal.y == -1)
                 {
                     finishFireWork.SetActive(true);

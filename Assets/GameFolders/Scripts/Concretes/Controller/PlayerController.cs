@@ -24,6 +24,8 @@ namespace SampleProject3D.Controller {
 
         public float TurnSpeed => turnSpeed;
         public float Force => force;
+        public bool CanMove => canMove;
+
         private void Awake()
         {
             _Input = new DefaultInput();
