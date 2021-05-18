@@ -9,10 +9,10 @@ namespace SampleProject3D.Abstracts.Controller {
 
     public abstract class WallController : MonoBehaviour
     {
-        private void OnCollisionEnter(Collision collision)
+         void OnCollisionEnter(Collision collision)
         {
             PlayerController pController = collision.collider.GetComponent<PlayerController>();
-            if (pController != null && !pController.CanMove)
+            if (pController != null && pController.CanMove)
             {
                 GameManager.Instance.GameOver();
             }

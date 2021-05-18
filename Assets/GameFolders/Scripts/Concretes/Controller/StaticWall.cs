@@ -7,7 +7,7 @@ namespace SampleProject3D.Controller
 {
     public class StaticWall : WallController
     {
-
+     
     }
 }
 
