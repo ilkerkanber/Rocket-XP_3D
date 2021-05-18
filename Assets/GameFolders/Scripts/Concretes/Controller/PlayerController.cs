@@ -37,8 +37,6 @@ namespace SampleProject3D.Controller {
             canMove = true;
             GameManager.Instance.OnGameOver += FreezePlayerEvent;
             GameManager.Instance.OnMissionSucced += FreezePlayerEvent;
-
-
         }
 
 
@@ -46,7 +44,6 @@ namespace SampleProject3D.Controller {
         {
             GameManager.Instance.OnGameOver -= FreezePlayerEvent;
             GameManager.Instance.OnMissionSucced -= FreezePlayerEvent;
-
         }
 
         private void Update()
