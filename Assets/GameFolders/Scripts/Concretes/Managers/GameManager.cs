@@ -11,7 +11,6 @@ namespace SampleProject3D.Managers {
         public event System.Action OnMissionSucced;
 
         public static GameManager Instance { get; private set; }
-        
 
         private void Awake()
         {
@@ -39,8 +38,6 @@ namespace SampleProject3D.Managers {
             OnMissionSucced?.Invoke();
         }
 
-
-
         public void LoadLevelScene(int levelIndex=0)
         {
             StartCoroutine(LoadLevelSceneAsync(levelIndex));
@@ -54,7 +51,6 @@ namespace SampleProject3D.Managers {
         {
             StartCoroutine(LoadMenuSceneAsync());
         }
-
         private IEnumerator LoadMenuSceneAsync()
         {
             yield return SceneManager.LoadSceneAsync("Menu");
