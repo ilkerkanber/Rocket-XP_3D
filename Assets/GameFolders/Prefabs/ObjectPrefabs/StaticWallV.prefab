@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 5158354696538104738}
   - component: {fileID: 5158354696538104739}
   - component: {fileID: 7970500267710180023}
-  m_Layer: 0
-  m_Name: StaticWallH
+  m_Layer: 9
+  m_Name: StaticWallV
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

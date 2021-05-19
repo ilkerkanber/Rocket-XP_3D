@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1800107282443427874}
   - component: {fileID: 1800107282443427877}
   - component: {fileID: 1800107282443427876}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rocket
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -69222,7 +69222,7 @@ GameObject:
   - component: {fileID: 1780267841466034778}
   - component: {fileID: 383569906302367392}
   - component: {fileID: 2137053482141814895}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -69314,7 +69314,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3425689292578388349}
   - component: {fileID: 2185458921105495021}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -69403,9 +69403,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1602590242758493817}
     m_Modifications:
+    - target: {fileID: 100000, guid: 1c20c7996d683754db1f0f62a361952c, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 1c20c7996d683754db1f0f62a361952c, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 100004, guid: 1c20c7996d683754db1f0f62a361952c, type: 3}
       propertyPath: m_Name
       value: CFX4 Fire
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 1c20c7996d683754db1f0f62a361952c, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 1c20c7996d683754db1f0f62a361952c, type: 3}
       propertyPath: m_LocalPosition.x
