@@ -32,7 +32,6 @@ namespace SampleProject3D.Controller {
             _Mover = new Mover(this);
             _Rotator = new Rotator(this);
             _Fuel = GetComponent<Fuel>();
-            
         }
         private void Start()
         {
@@ -40,7 +39,6 @@ namespace SampleProject3D.Controller {
             GameManager.Instance.OnGameOver += FreezePlayerEvent;
             GameManager.Instance.OnMissionSucced += FreezePlayerEvent;
         }
-
 
         private void OnDisable()
         {

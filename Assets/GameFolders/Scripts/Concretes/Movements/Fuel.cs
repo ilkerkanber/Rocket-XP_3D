@@ -9,6 +9,8 @@ public class Fuel : MonoBehaviour
     [SerializeField] ParticleSystem particle;
 
     public bool isEmpty => currentFuel < 1f;
+    public float CurrentFuel => currentFuel;
+    
     private void Awake()
     {
         currentFuel = maxFuel;
