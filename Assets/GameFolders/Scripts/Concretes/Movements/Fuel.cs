@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using SampleProject3D.Managers;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -23,6 +24,7 @@ public class Fuel : MonoBehaviour
         if (particle.isPlaying) { 
             particle.Stop(); 
         }
+        SoundManager.Instance.StopSound(0);
     }
 
     public void FuelDecrease(float decrease)
@@ -34,5 +36,6 @@ public class Fuel : MonoBehaviour
         {
             particle.Play();
         }
+        SoundManager.Instance.PlaySound(0);
     }
 }

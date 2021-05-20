@@ -5,28 +5,15 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 namespace SampleProject3D.Managers {
-    public class GameManager : MonoBehaviour
+    public class GameManager : SingletonObject<GameManager>
     {
         public event System.Action OnGameOver;
         public event System.Action OnMissionSucced;
 
-        public static GameManager Instance { get; private set; }
-
         private void Awake()
         {
-            SingletonPattern();
-        }
-        void SingletonPattern()
-        {
-            if (Instance == null)
-            {
-                Instance = this;
-                DontDestroyOnLoad(this.gameObject);
-            }
-            else
-            {
-                Destroy(this.gameObject);
-            }
+            SetupSingleTon(this);
+
         }
         public void GameOver()
         {
@@ -44,7 +31,9 @@ namespace SampleProject3D.Managers {
         //ARKADA Pasif olarak yükler diğer metodlardan ayrı çalışır.
         private IEnumerator LoadLevelSceneAsync(int levelIndex) 
         {
+            SoundManager.Instance.StopSound(1);
             yield return SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + levelIndex);
+            SoundManager.Instance.PlaySound(2);
         }
         public void LoadMenuScene()
         {
@@ -52,7 +41,9 @@ namespace SampleProject3D.Managers {
         }
         private IEnumerator LoadMenuSceneAsync()
         {
+            SoundManager.Instance.StopSound(2);
             yield return SceneManager.LoadSceneAsync("Menu");
+            SoundManager.Instance.PlaySound(1);
         }
 
         public void Exit()
